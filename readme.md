@@ -82,3 +82,80 @@ int main()
 ```
 
 we are able to make a cube and cuboid from a simple `Object` blueprint and call the same `printVolume()` method on both objects and everything works as expected.
+
+Output:
+```
+Volume of cube is:      1000
+
+Volume of cuboid is:    6000
+```
+
+**lab03_friendFunction.cpp**
+
+Fried functions can be used to declare and control trusted methods outside the class.
+Thought not delared within the class scope, friend functions have access to 
+all the private data and function members of a class.
+
+We will use friend functions to do matrix multiplication.
+
+The main call:
+```cpp
+int main()
+{
+    int r1, r2, c1, c2;
+    cout << "\nEnter rows in M1:\t";
+    cin >> r1;
+    cout << "\nEnter columns in M1:\t";
+    cin >> c1;
+    cout << "\nEnter rows in M2:\t";
+    cin >> r2;
+    cout << "\nEnter columns in M2:\t";
+    cin >> c2;
+    Matrix m1(r1, c1);
+    Matrix m2(r2, c2);
+    m1.initialize();
+    m2.initialize();
+    m1.display();
+    m2.display();
+    cout << "\n"
+         << canMultiply(m1, m2) << endl;
+    if(canMultiply(m1,m2)){
+        Matrix m3 = multiply(m1, m2);
+        m3.display();
+    }
+    return 0;
+}
+```
+
+output:
+```
+Enter rows in M1:       2
+
+Enter columns in M1:    2
+
+Enter rows in M2:       2
+
+Enter columns in M2:    2
+Enter value in [1][1]   :2
+Enter value in [1][2]   :2
+Enter value in [2][1]   :2
+Enter value in [2][2]   :2
+Enter value in [1][1]   :2
+Enter value in [1][2]   :2
+Enter value in [2][1]   :2
+Enter value in [2][2]   :2
+
+The Matrix is:
+2       2
+2       2
+
+The Matrix is:
+2       2
+2       2
+
+1
+
+The Matrix is:
+8       8
+8       8
+```
