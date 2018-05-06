@@ -62,3 +62,23 @@ x:      10
 Value:  30
 x:      11
 ```
+
+## Day 03
+Polymorphism
+
+**lab03.cpp**
+
+Polymorphism happens when a part of our program can handle multiple situations and take on multiple behaviors.
+Constructor overloading allows to instantiate objects with different subsets of available data.
+
+```cpp
+int main()
+{
+    Object cube(10.0f), cuboid(10.0f, 20.0f, 30.0f);
+    cube.printVolume();
+    cuboid.printVolume();
+    return 0;
+}
+```
+
+we are able to make a cube and cuboid from a simple `Object` blueprint and call the same `printVolume()` method on both objects and everything works as expected.
