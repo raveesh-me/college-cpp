@@ -54,3 +54,11 @@ int main()
 }
 ```
 This is exactly the kind of code that does nothing to explain the concepts elaborated within it. Also such architecture is an extreme anti-pattern and we shouldn't follow any part of this in our developer life, but college is college.
+output:
+```
+x:      10
+x:      11
+x:      10
+Value:  30
+x:      11
+```
