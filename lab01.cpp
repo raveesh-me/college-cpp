@@ -27,6 +27,10 @@ class Student
             <<"Roll:\t"<<roll<<endl
             <<"Year:\t"<<year<<endl;
     }
+    ~Student()
+    {
+        cout<<"inside destructor":
+    }
 
 };
 
